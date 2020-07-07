@@ -11,7 +11,7 @@ import ArtStationIcon from '../static/images/artStation_icon.jpg';
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        marginTop: 10,
+        marginTop: 60,
         marginBottom: 10,
     },
     small: {

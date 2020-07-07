@@ -14,9 +14,17 @@ const styles = theme => ({
   },
   typography: {
     fontFamily: 'Raleway',
+    width:"100%", 
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 15,
+  },
+  body1: {
+    textAlign: 'left',
+    fontSize: 11,
+    margin: '20px 60px 60px 60px',
+    padding: 10,
   }
 });
 
@@ -29,8 +37,14 @@ class About extends Component {
                 <div style={{width:"100%"}}>
                     <Avatar style={{margin:50}} alt="Isabel Diaz" src={avatar} className={classes.large} />
                 </div>
-                <div style={{width:"100%", textAlign: 'center'}}>
+                <div className={classes.typography}>
                     <Typography variant="h4">{t('AboutMe')}</Typography>
+                    <div className={classes.body1}>
+                      <Typography variant="body1">{t('AboutInformation1')}</Typography><br/>
+                      <Typography variant="body1">{t('AboutInformation2')}</Typography><br/>
+                      <Typography variant="body1">{t('AboutInformation3')}</Typography><br/>
+                      <Typography variant="body1">{t('AboutInformation4')}</Typography><br/>
+                  </div>
                 </div>
             </div>
         );
