@@ -5,19 +5,19 @@ import { Typography, Avatar } from '@material-ui/core';
 import avatar from '../static/images/avatar_isabel.jpg';
 
 const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-      },
-      large: {
-        width: theme.spacing(18),
-        height: theme.spacing(18),
-      },
-      typography: {
-        fontFamily: 'Raleway',
-      },
-      subtitle: {
-        fontSize: 15,
-      }
+  button: {
+      margin: theme.spacing.unit,
+  },
+  large: {
+    width: theme.spacing(18),
+    height: theme.spacing(18),
+  },
+  typography: {
+    fontFamily: 'Raleway',
+  },
+  subtitle: {
+    fontSize: 15,
+  }
 });
 
 class About extends Component {

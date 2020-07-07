@@ -4,5 +4,19 @@
     "Jobs" : "Trabajos",
     "Languages": "Idiomas",
     "ProgrammLanguages" : "Lenguajes de programación",
-    "Tools": "Programas/Herramientas"
+    "Tools": "Programas/Herramientas",
+    "Studies1": "Grado en Ingeniería Informática",
+    "Studies2": "Máster en Animación 3D con Maya",
+    "Work1": "Junior Web Developer in Aldaba (September 2018-October 2019)",
+    "Language1": "Español nativo",
+    "Language2": "B2 (Cambridge English Level 1 Certificate in ESOL International (First) – Grade C)",
+    "Language3": "Gallego C1 (Celga 4)",
+    "Programm1": "JavaScript",
+    "Programm2": "C#",
+    "Programm3": "Java",
+    "Programm4": "Python",
+    "Tool1": "Maya",
+    "Tool2": "Houdini",
+    "Tool3": "Natron",
+    "Tool4": "Visual Studio Code"
 }
