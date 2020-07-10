@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import { withStyles } from '@material-ui/core';
-import { Typography, Avatar } from '@material-ui/core';
+import { Typography, Avatar, Divider } from '@material-ui/core';
 import avatar from '../static/images/avatar_isabel.jpg';
 
 const styles = theme => ({
@@ -9,13 +9,14 @@ const styles = theme => ({
       margin: theme.spacing.unit,
   },
   large: {
+    marginLeft:50,
+    marginTop:50,
     width: theme.spacing(18),
     height: theme.spacing(18),
   },
-  typography: {
-    fontFamily: 'Raleway',
+  about: {
     width:"100%", 
-    textAlign: 'center',
+    padding: 20,
   },
   subtitle: {
     fontSize: 15,
@@ -23,8 +24,24 @@ const styles = theme => ({
   body1: {
     textAlign: 'left',
     fontSize: 11,
-    margin: '20px 60px 60px 60px',
-    padding: 10,
+    margin: '20px 50px 0px 50px',
+  },
+  top : {
+    width:'100%', 
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  name: {
+    width: '100%',
+    marginTop: 100,
+    marginBottom: 100,
+    height: '14%',
+    textAlign: 'left',
+    paddingLeft: 80,
+  },
+  titleAbout : {
+    textAlign: 'left',
+    marginLeft: 50,
   }
 });
 
@@ -34,18 +51,21 @@ class About extends Component {
 
         return (
             <div>
-                <div style={{width:"100%"}}>
-                    <Avatar style={{margin:50}} alt="Isabel Diaz" src={avatar} className={classes.large} />
+                <div className={classes.top}>
+                    <Avatar className={classes.avatar} alt="IsabelDiaz" src={avatar} className={classes.large} />
+                    <Typography variant="subtitle1" className={classes.name} >{t('Name')}</Typography>
                 </div>
-                <div className={classes.typography}>
-                    <Typography variant="h4">{t('AboutMe')}</Typography>
+                <Divider />
+                <div className={classes.about}>
+                    <Typography className={classes.titleAbout} variant='h4'>{t('AboutMe')}</Typography>
                     <div className={classes.body1}>
                       <Typography variant="body1">{t('AboutInformation1')}</Typography><br/>
                       <Typography variant="body1">{t('AboutInformation2')}</Typography><br/>
                       <Typography variant="body1">{t('AboutInformation3')}</Typography><br/>
                       <Typography variant="body1">{t('AboutInformation4')}</Typography><br/>
-                  </div>
+                    </div>
                 </div>
+                <Divider />
             </div>
         );
     } 

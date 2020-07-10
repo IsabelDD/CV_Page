@@ -14,6 +14,10 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
 
 const styles = theme => ({
+    root : {
+        width:"100%",
+        marginTop: 30,
+    },
     typography: {
         fontFamily: 'Raleway',
     },
@@ -48,7 +52,7 @@ class Aptitudes extends Component {
         const { classes, t } = this.props;
 
         return (
-            <div style={{width:"100%"}}>
+            <div className={classes.root}>
                 <div className={classes.expansion}>
                     <ExpansionPanel>
                         <ExpansionPanelSummary className={classes.expansionSummary} 
