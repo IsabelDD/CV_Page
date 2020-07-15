@@ -144,13 +144,7 @@ class Aptitudes extends Component {
                                 </ListItem>  
                                 <ListItem className={classes.ul}>
                                     <Typography>{t('Tool3')}</Typography>
-                                </ListItem>    
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool4')}</Typography>
-                                </ListItem>    
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool5')}</Typography>
-                                </ListItem>                          
+                                </ListItem>                           
                             </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>

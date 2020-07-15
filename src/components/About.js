@@ -24,7 +24,7 @@ const styles = theme => ({
   body1: {
     textAlign: 'left',
     fontSize: 11,
-    margin: '20px 50px 0px 50px',
+    margin: '20px 80px 0px 40px',
   },
   top : {
     width:'100%', 
@@ -36,12 +36,15 @@ const styles = theme => ({
     marginTop: 100,
     marginBottom: 100,
     height: '14%',
-    textAlign: 'left',
+    textAlign: 'right',
     paddingLeft: 80,
+    paddingRight: 80,
+    fontStyle: 'italic',
+    fontWeight: 500,
   },
   titleAbout : {
     textAlign: 'left',
-    marginLeft: 50,
+    marginLeft: 40,
   }
 });
 

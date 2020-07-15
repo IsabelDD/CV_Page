@@ -7,7 +7,7 @@ const languages_avaliable = [ 'en', 'es'];
 i18n.init({
 
     interpolation:{escapeValue: false},
-    fallbackLng: languages_avaliable.includes(navigator.language) ? navigator.language : 'es',
+    fallbackLng: languages_avaliable.includes(navigator.language) ? navigator.language : 'es', //Language by default
 
     resources: {
         en: {
