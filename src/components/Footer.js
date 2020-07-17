@@ -7,6 +7,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import ArtStationIcon from '../static/images/artStation_icon.jpg';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const styles = theme => ({
     root: {
@@ -50,6 +51,7 @@ class Footer extends Component {
             artStationLink : "https://www.artstation.com/isabel_diaz",
             linkedinLink: "https://es.linkedin.com/in/isabel-diaz-dominguez",
             githubLink: "https://github.com/IsabelDD",
+            twitterLink: "https://twitter.com/isabeldido",
         }; 
     }
 
@@ -85,7 +87,7 @@ class Footer extends Component {
             <div>
                 <Grid container l={12} m={12} xs={12} direction="row" justify="center" alignItems="center"
                     className={classes.root} spacing={3}>
-                    <Grid item xs={4}></Grid>
+                    <Grid item xs={3}></Grid>
                     <Grid item xs={1} className={classes.gridItem}>
                         <Tooltip open={this.state.openTooltip} onClose={this.handleClose} className={classes.tooltip} title={t('EmailCopied')}>
                             <Avatar alt="Email" 
@@ -119,7 +121,15 @@ class Footer extends Component {
                         src={ArtStationIcon}>
                         </Avatar>   
                     </Grid>
-                    <Grid item xs={4}></Grid> 
+                    <Grid item xs={1} className={classes.gridItem}>
+                        <Avatar alt="Twitter" 
+                        onClick={() => 
+                            this.handleClick(this.state.twitterLink)}
+                            className={classes.small, classes.icon}> 
+                        <TwitterIcon/> 
+                        </Avatar>
+                    </Grid>
+                    <Grid item xs={3}></Grid> 
                 </Grid>
             </div>
         );

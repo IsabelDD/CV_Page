@@ -109,7 +109,7 @@ class Aptitudes extends Component {
                         <ExpansionPanelSummary className={classes.expansionSummary} 
                             expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header" >
                             <Avatar className={classes.small, classes.icon}> <KeyboardIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('ProgrammLanguages')}</Typography>
+                            <Typography className={classes.heading}>{t('ProgrammingLanguages')}</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <List>
