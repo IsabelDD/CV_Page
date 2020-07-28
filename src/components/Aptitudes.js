@@ -1,23 +1,39 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
-import { Typography, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {Heading} from './Heading_ExpansionPanel';
+//Material-ui
+import { withStyles } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+import {ExpansionPanel, ExpansionPanelDetails } from '@material-ui/core';
+import { List, ListItem } from '@material-ui/core';
 
 const styles = theme => ({
+    root : {
+        width:"100%",
+        marginTop: 30,
+    },
     typography: {
         fontFamily: 'Raleway',
     },
     heading: {
         fontSize: 14,
+        width: '80%',
+        margin: theme.spacing(1),
     },
     expansion : {
-        marginLeft:60,
-        marginRight:60,
+        margin: "0px 60px 0px 60px",
     },
     expansionSummary : {
         backgroundColor:'#dbe7e7',
-    }
+    },
+    small: {
+        width: theme.spacing(4),
+        height: theme.spacing(4),
+    },
+    icon :{
+        backgroundColor: '#303030',
+        color: 'white',
+    },
 });
 
 class Aptitudes extends Component {
@@ -26,72 +42,96 @@ class Aptitudes extends Component {
         const { classes, t } = this.props;
 
         return (
-            <div style={{width:"100%"}}>
+            <div className={classes.root}>
                 <div className={classes.expansion}>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('Studies')}</Typography>
-                        </ExpansionPanelSummary>
+                    {Heading(this.props, 'Studies', "1")}
                         <ExpansionPanelDetails >
-                            <Typography>
-                                
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Studies1')}</Typography>
+                                </ListItem>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Studies2')}</Typography>
+                                </ListItem>                              
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('Jobs')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Jobs', "2")}
                         <ExpansionPanelDetails>
-                            <Typography>
-                               
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Work1')}</Typography>
+                                </ListItem>                           
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('Jobs')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Languages', "3")}
                         <ExpansionPanelDetails>
-                            <Typography>
-                                
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Language1')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Language2')}</Typography>
+                                </ListItem>  
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Language3')}</Typography>
+                                </ListItem>                          
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('Languages')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'ProgrammingLanguages', "4")}
                         <ExpansionPanelDetails>
-                            <Typography>
-
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm1')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm2')}</Typography>
+                                </ListItem>  
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm3')}</Typography>
+                                </ListItem>    
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm4')}</Typography>
+                                </ListItem>                          
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('ProgrammLanguages')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Tools', "5")}
                         <ExpansionPanelDetails>
-                            <Typography>
-                            
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool2')}</Typography>
+                                </ListItem>  
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool1')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool4')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool3')}</Typography>
+                                </ListItem>                           
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
-                            <Typography className={classes.heading}>{t('Tools')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Skills', "6")}
                         <ExpansionPanelDetails>
-                            <Typography>
-                            
-                            </Typography>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill1')}</Typography>
+                                </ListItem> 
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill2')}</Typography>
+                                </ListItem>                             
+                            </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                 </div>
