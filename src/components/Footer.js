@@ -3,6 +3,7 @@ import { withTranslation } from 'react-i18next';
 import copy from "copy-to-clipboard";  
 import { withStyles } from '@material-ui/core';
 import { Avatar, Grid, Tooltip } from '@material-ui/core';
+//Icons
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -22,10 +23,6 @@ const styles = theme => ({
     icon :{
         backgroundColor: '#303030',
         color: 'white',
-        colorFill: 'pink',
-        "&:hover": {
-            cursor: "pointer",
-        }
     },
     gridItem : {
         textAlign : "-webkit-center",

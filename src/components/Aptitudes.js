@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
+import {Heading} from './Heading_ExpansionPanel';
 //Material-ui
 import { withStyles } from '@material-ui/core';
-import { Typography, Avatar } from '@material-ui/core';
-import {ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
-import {List, ListItem } from '@material-ui/core';
-//Icons
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import WorkIcon from '@material-ui/icons/Work';
-import KeyboardIcon from '@material-ui/icons/Keyboard';
-import PublicIcon from '@material-ui/icons/Public';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
+import { Typography } from '@material-ui/core';
+import {ExpansionPanel, ExpansionPanelDetails } from '@material-ui/core';
+import { List, ListItem } from '@material-ui/core';
 
 const styles = theme => ({
     root : {
@@ -27,8 +21,7 @@ const styles = theme => ({
         margin: theme.spacing(1),
     },
     expansion : {
-        marginLeft:60,
-        marginRight:60,
+        margin: "0px 60px 0px 60px",
     },
     expansionSummary : {
         backgroundColor:'#dbe7e7',
@@ -41,9 +34,6 @@ const styles = theme => ({
         backgroundColor: '#303030',
         color: 'white',
     },
-    ul : {
-        listStyleType: 'disc',
-    }
 });
 
 class Aptitudes extends Component {
@@ -55,11 +45,7 @@ class Aptitudes extends Component {
             <div className={classes.root}>
                 <div className={classes.expansion}>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header" >
-                            <Avatar className={classes.small, classes.icon}> <MenuBookIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('Studies')}</Typography>
-                        </ExpansionPanelSummary>
+                    {Heading(this.props, 'Studies', "1")}
                         <ExpansionPanelDetails >
                             <List>
                                 <ListItem className={classes.ul}>
@@ -72,11 +58,7 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header" >
-                            <Avatar className={classes.small, classes.icon}> <WorkIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('Jobs')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Jobs', "2")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -86,11 +68,7 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel4-content" id="panel4-header" >
-                            <Avatar className={classes.small, classes.icon}> <PublicIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('Languages')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Languages', "3")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -106,11 +84,7 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header" >
-                            <Avatar className={classes.small, classes.icon}> <KeyboardIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('ProgrammingLanguages')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'ProgrammingLanguages', "4")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -129,22 +103,34 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        <ExpansionPanelSummary className={classes.expansionSummary} 
-                            expandIcon={<ExpandMoreIcon />} aria-controls="panel6-content" id="panel6-header" >
-                            <Avatar className={classes.small, classes.icon}> <DesktopWindowsIcon />  </Avatar>
-                            <Typography className={classes.heading}>{t('Tools')}</Typography>
-                        </ExpansionPanelSummary>
+                        {Heading(this.props, 'Tools', "5")}
                         <ExpansionPanelDetails>
                             <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool1')}</Typography>
-                                </ListItem>   
                                 <ListItem className={classes.ul}>
                                     <Typography>{t('Tool2')}</Typography>
                                 </ListItem>  
                                 <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool1')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool4')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
                                     <Typography>{t('Tool3')}</Typography>
                                 </ListItem>                           
+                            </List>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel>
+                        {Heading(this.props, 'Skills', "6")}
+                        <ExpansionPanelDetails>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill1')}</Typography>
+                                </ListItem> 
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill2')}</Typography>
+                                </ListItem>                             
                             </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
