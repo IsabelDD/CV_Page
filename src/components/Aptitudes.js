@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
-import {Heading} from './Heading_ExpansionPanel';
+import {Heading} from './Auxiliar/HeadingExpansionPanel';
 //Material-ui
 import { withStyles } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
