@@ -68,7 +68,23 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        {Heading(this.props, 'Languages', "3")}
+                        {Heading(this.props, 'CursesTitle', "3")}
+                        <ExpansionPanelDetails>
+                            <List>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Curse1')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Curse2')}</Typography>
+                                </ListItem> 
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Curse3')}</Typography>
+                                </ListItem>                             
+                            </List>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel>
+                        {Heading(this.props, 'Languages', "4")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -84,7 +100,7 @@ class Aptitudes extends Component {
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        {Heading(this.props, 'ProgrammingLanguages', "4")}
+                        {Heading(this.props, 'ProgrammingLanguages', "5")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -98,12 +114,27 @@ class Aptitudes extends Component {
                                 </ListItem>    
                                 <ListItem className={classes.ul}>
                                     <Typography>{t('Programm4')}</Typography>
-                                </ListItem>                          
+                                </ListItem>
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm5')}</Typography>
+                                </ListItem>       
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm6')}</Typography>
+                                </ListItem>       
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm7')}</Typography>
+                                </ListItem>       
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm8')}</Typography>
+                                </ListItem>   
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Programm9')}</Typography>
+                                </ListItem>                                     
                             </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        {Heading(this.props, 'Tools', "5")}
+                        {Heading(this.props, 'Tools', "6")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -116,13 +147,25 @@ class Aptitudes extends Component {
                                     <Typography>{t('Tool4')}</Typography>
                                 </ListItem>   
                                 <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool3')}</Typography>
-                                </ListItem>                           
+                                    <Typography>{t('Tool5')}</Typography>
+                                </ListItem>      
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool6')}</Typography>
+                                </ListItem>    
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool7')}</Typography>
+                                </ListItem>    
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool8')}</Typography>
+                                </ListItem>    
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Tool9')}</Typography>
+                                </ListItem>                         
                             </List>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
-                        {Heading(this.props, 'Skills', "6")}
+                        {Heading(this.props, 'Skills', "7")}
                         <ExpansionPanelDetails>
                             <List>
                                 <ListItem className={classes.ul}>
@@ -130,6 +173,12 @@ class Aptitudes extends Component {
                                 </ListItem> 
                                 <ListItem className={classes.ul}>
                                     <Typography>{t('Skill2')}</Typography>
+                                </ListItem> 
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill3')}</Typography>
+                                </ListItem> 
+                                <ListItem className={classes.ul}>
+                                    <Typography>{t('Skill4')}</Typography>
                                 </ListItem>                             
                             </List>
                         </ExpansionPanelDetails>
