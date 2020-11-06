@@ -8,16 +8,18 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import PublicIcon from '@material-ui/icons/Public';
 import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
 import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
+import SchoolIcon from '@material-ui/icons/School';
 import {ExpansionPanelSummary} from '@material-ui/core'; 
 
 function iconSelected(selected) {
     switch(selected){
-        case '1': return <MenuBookIcon/>;
+        case '1': return <SchoolIcon/>;
         case '2': return <WorkIcon/>;
         case '3': return <PublicIcon/>;
         case '4': return <KeyboardIcon/>;
         case '5': return <DesktopWindowsIcon/>;
         case '6': return <AddCircleRoundedIcon/>;
+        case '7': return <MenuBookIcon/>;
         default: return <AddCircleRoundedIcon/>
     };
 }
