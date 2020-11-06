@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
-import {Heading} from './Auxiliar/HeadingExpansionPanel';
+import {ExpansionPanelList} from './Auxiliar/AuxiliarPanel';
 //Material-ui
 import { withStyles } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
-import {ExpansionPanel, ExpansionPanelDetails } from '@material-ui/core';
-import { List, ListItem } from '@material-ui/core';
 
 const styles = theme => ({
     root : {
@@ -44,139 +41,13 @@ class Aptitudes extends Component {
         return (
             <div className={classes.root}>
                 <div className={classes.expansion}>
-                    <ExpansionPanel>
-                    {Heading(this.props, 'Studies', "1")}
-                        <ExpansionPanelDetails >
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Studies1')}</Typography>
-                                </ListItem>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Studies2')}</Typography>
-                                </ListItem>                              
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'Jobs', "2")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Work1')}</Typography>
-                                </ListItem>                           
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'CursesTitle', "7")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Curse1')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Curse2')}</Typography>
-                                </ListItem> 
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Curse3')}</Typography>
-                                </ListItem>                             
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'Languages', "3")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Language1')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Language2')}</Typography>
-                                </ListItem>  
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Language3')}</Typography>
-                                </ListItem>                          
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'ProgrammingLanguages', "4")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm1')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm2')}</Typography>
-                                </ListItem>  
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm3')}</Typography>
-                                </ListItem>    
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm4')}</Typography>
-                                </ListItem>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm5')}</Typography>
-                                </ListItem>       
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm6')}</Typography>
-                                </ListItem>       
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm7')}</Typography>
-                                </ListItem>       
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm8')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Programm9')}</Typography>
-                                </ListItem>                                     
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'Tools', "5")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool2')}</Typography>
-                                </ListItem>  
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool1')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool4')}</Typography>
-                                </ListItem>   
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool5')}</Typography>
-                                </ListItem>      
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool6')}</Typography>
-                                </ListItem>    
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Tool7')}</Typography>
-                                </ListItem>                         
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                    <ExpansionPanel>
-                        {Heading(this.props, 'Skills', "6")}
-                        <ExpansionPanelDetails>
-                            <List>
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Skill1')}</Typography>
-                                </ListItem> 
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Skill2')}</Typography>
-                                </ListItem> 
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Skill3')}</Typography>
-                                </ListItem> 
-                                <ListItem className={classes.ul}>
-                                    <Typography>{t('Skill4')}</Typography>
-                                </ListItem>                             
-                            </List>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
+                    {ExpansionPanelList(this.props, 'Studies', "1")}
+                    {ExpansionPanelList(this.props, 'Jobs', "2")}
+                    {ExpansionPanelList(this.props, 'Curses', "7")}
+                    {ExpansionPanelList(this.props, 'Languages', "3")}
+                    {ExpansionPanelList(this.props, 'Programms', "4")}  
+                    {ExpansionPanelList(this.props, 'Tools', "5")}
+                    {ExpansionPanelList(this.props, 'Skills', "6")}
                 </div>
             </div>
         );
